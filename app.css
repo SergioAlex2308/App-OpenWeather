@@ -1,0 +1,168 @@
+:root {
+	--purple-150: #251625;
+	--purple-100: #321D32;
+	--purple-50: #422542;
+	--purple-10: #5A3D5A;
+	--white: #EEE7EE;
+}
+
+html {
+	box-sizing: border-box;
+	/* 1rem = 10px */
+	font-size: 62.5%;
+
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	font-size: 1.6rem;
+	background-color: var(--purple-150);
+	color: var(--white);
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+.hidden {
+	display: none;
+}
+
+header {
+	text-align: center;
+	color: var(--white);
+}
+
+.bar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.bar input, 
+.bar button,
+.bar select {
+
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+button,
+input {
+
+	font-family: 'Poppins', sans-serif;
+	font-weight: 200;
+}
+
+
+#inputCity {
+	font-size: 3rem;
+	border-radius: 5rem;
+	padding: 0.5rem 7rem;
+	color: var(--purple-100);
+	background-color: var(--white);
+}
+
+#clear {
+	/* Auto layout */
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 2rem;
+
+	width: 26rem;
+	height: 4rem;
+
+	/* Purple-50 */
+	background: var(--purple-50);
+	border-radius: 5rem;
+
+	color: var(--white)
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	gap: 10rem;
+	padding: 3rem 0;
+}
+
+.container-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	min-width: 26rem;
+	min-height: 30rem;
+
+	padding: 2rem;
+	margin: 0;
+	background-color: var(--purple-50);
+	border-radius: 1rem;
+
+	color: var(--white);
+}
+.card-close {
+	padding: 0.5rem;
+	max-width: 2.5rem;
+	max-height: 2.5rem;
+	font-size: 1.2rem;
+	text-align: center;
+	outline: none;
+	border: none;
+	color: var(--white);
+	background-color: var(--purple-50);
+}
+.card-close:hover {
+	background-color: var(--purple-150);
+}
+
+.card-icon {
+	max-width: 10rem;
+}
+
+.card-title {
+	font-weight: 200;
+	font-size: 3rem;
+	margin: 0;
+	padding: 1rem 0;
+	border-bottom: var(--white) 0.1rem solid;
+}
+
+.card-temp {
+	font-weight: bold;
+	font-size: 4rem;
+	padding: 1rem 0;
+	margin: 0;
+}
+
+.card-data {
+	font-weight: 200;
+	font-style: italic;
+	font-size: 1.4rem;
+}
+
+footer .footer-icons {
+	background-color: var(--purple-100);
+
+	/* Auto layout */
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+	padding: 3rem 60rem;
+}
+
+svg {
+	fill: var(--white);
+}
