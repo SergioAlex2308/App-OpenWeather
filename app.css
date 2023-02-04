@@ -15,9 +15,13 @@ html {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	font-size: 1.6rem;
 	background-color: var(--purple-150);
 	color: var(--white);
+	min-height: 100vh;
+	margin: 0;
 }
 
 *,
@@ -40,6 +44,7 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding-bottom: 2rem;
 }
 
 .bar input, 
@@ -86,14 +91,19 @@ input {
 	background: var(--purple-50);
 	border-radius: 5rem;
 
-	color: var(--white)
+	color: var(--white);
+	cursor: pointer;
 }
 
 main {
-	display: flex;
-	justify-content: center;
-	gap: 10rem;
-	padding: 3rem 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	justify-content: space-evenly;
+	gap: 2rem;
+	padding: 3rem 5rem;
+	overflow-y: scroll;
+	max-height: 80rem;
 }
 
 .container-card {
@@ -101,8 +111,8 @@ main {
 	flex-direction: column;
 	justify-content: center;
 
-	min-width: 26rem;
-	min-height: 30rem;
+	max-width: 26rem;
+	max-height: 30rem;
 
 	padding: 2rem;
 	margin: 0;
@@ -127,20 +137,20 @@ main {
 }
 
 .card-icon {
-	max-width: 10rem;
+	max-width: 8rem;
 }
 
 .card-title {
 	font-weight: 200;
 	font-size: 3rem;
 	margin: 0;
-	padding: 1rem 0;
+	padding: 1rem 0 0;
 	border-bottom: var(--white) 0.1rem solid;
 }
 
 .card-temp {
 	font-weight: bold;
-	font-size: 4rem;
+	font-size: 3rem;
 	padding: 1rem 0;
 	margin: 0;
 }
@@ -149,6 +159,7 @@ main {
 	font-weight: 200;
 	font-style: italic;
 	font-size: 1.4rem;
+	margin: 0;
 }
 
 footer .footer-icons {
@@ -160,7 +171,7 @@ footer .footer-icons {
 	justify-content: space-evenly;
 	align-items: center;
 
-	padding: 3rem 60rem;
+	padding: 3rem 50rem;
 }
 
 svg {

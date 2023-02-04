@@ -15,13 +15,8 @@ async function fetchApp(city) {
 	const res = await response.json();
 
 	const objCard = toObj(res.name, res.sys.country, res.main.temp, res.weather);
-	console.log(objCard);
 
 	cardWeather(objCard);
-
-
-
-	//return {...objCard};
 }
 
 function toObj(name, country, temp, weather) {
@@ -57,6 +52,10 @@ function cardWeather(data) {
 	weatherData.textContent = data.weather[0].description;
 
 	close.addEventListener('click', () => {
+
+		const index = history.indexOf(name.toUpperCase());
+		history.splice(index, 1);
+		
 		app.removeChild(container);
 	})
 
@@ -90,7 +89,6 @@ function search() {
 		while(app.firstChild) {
 			app.removeChild(app.lastChild);
 			history.pop();
-			console.log(history);
 		}
 	});
 
@@ -100,9 +98,11 @@ function search() {
 			e.preventDefault();
 			const value = e.target.value;
 			
-			if(!history.includes(value)) {
+			if(!history.includes(value.toUpperCase())) {
 				fetchApp(value);
-				history.push(value);
+
+				history.push(value.toUpperCase());
+
 				e.target.value = '';
 				return;
 			} else {
@@ -111,9 +111,4 @@ function search() {
 		}
 	});
 }
-
 search();
-//console.log(searchInput);
-//const searchInput = getCity();
-//const result = fetchApp('London');
-//console.log(result);
