@@ -11,3 +11,5 @@ global and local weather models, satellites, radars and a vast network of weathe
 [Consult documentation](https://openweathermap.org/api).
 
 Here is the [result](https://sergioalex2308.github.io/App-OpenWeather/), it has been deployed using githubpages.
+
+I created these [mockups](https://www.figma.com/file/6u9vXVGiDL3CCVK7iiLaB2/WeatherApp?node-id=0%3A1&t=pzE9TRr3SGSCK4RM-1) using Figma to give me an idea of the result I should get.
