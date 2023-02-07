@@ -1,5 +1,5 @@
 # App-OpenWeather
-As part of the challenge in the DOM manipulation course on Platzi, this little website was created.
+As part of the challenge in the DOM Manipulation Course on Platzi, this little website was created.
 
 Use HTML5, CSS3, and JavaScript. Consult the API to get climate data of the city specified by the user.
 
